@@ -1,0 +1,66 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 7%;
+
+    --secondary: 0 0% 17.5%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 17.5%;
+    --muted-foreground: 0 0% 65.1%;
+
+    --accent: 0 0% 17.5%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 0% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 17.5%;
+    --input: 0 0% 17.5%;
+    --ring: 0 0% 83.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 10%;
+    --sidebar-foreground: 0 0% 95.9%;
+    --sidebar-primary: 0 0% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 15.9%;
+    --sidebar-accent-foreground: 0 0% 95.9%;
+    --sidebar-border: 0 0% 15.9%;
+    --sidebar-ring: 0 0% 59.8%;
+
+    /* Health status colors - monochrome for dark mode */
+    --health-normal: 0 0% 80%;
+    --health-warning: 0 0% 60%;
+    --health-danger: 0 0% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  .glass-morphism {
+    @apply backdrop-blur-xl bg-white/5 border border-white/10;
+  }
+}
