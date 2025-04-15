@@ -66,7 +66,8 @@ async function convertFileToBase64(file: File): Promise<string> {
     const reader = new FileReader();
     reader.onload = () => {
       if (typeof reader.result === 'string') {
-        resolve(reader.result.split(',')[1]);
+        // Return the full data URL for production environment
+        resolve(reader.result);
       } else {
         reject(new Error('Failed to convert file to base64'));
       }
@@ -146,7 +147,7 @@ async function performOCRWithModel(file: File, model: string, apiKey: string): P
             role: "user",
             content: [
               { type: "text", text: "Extract all text from this health report:" },
-              { type: "image_url", image_url: { url: `data:image/jpeg;base64,${base64File}` } }
+              { type: "image_url", image_url: { url: base64File } }
             ]
           }
         ],
