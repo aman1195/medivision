@@ -106,7 +106,7 @@ async function performOCRWithModel(file: File, model: string, apiKey: string): P
                   }
                 ],
                 temperature: 0.1,
-                max_tokens: 4000
+                max_tokens: 20000
               })
             });
             

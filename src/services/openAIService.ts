@@ -214,7 +214,7 @@ The detailedAnalysis should provide a comprehensive assessment of overall health
         ],
         temperature: 0.1,
         response_format: { type: "json_object" },
-        max_tokens: 4000
+        max_tokens: 20000
       })
     });
 
